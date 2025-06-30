@@ -66,23 +66,31 @@ function App() {
         id="tentang"
         className="scroll-mt-20 mt-10 py-16 px-4 animate__animated animate__fadeInUp animate__delay-7s"
       >
-        <div className="max-w-3xl mx-auto p-8 rounded-2xl border border-zinc-200 bg-white dark:bg-[var(--card)] shadow-sm dark:shadow-none relative overflow-hidden transition-all duration-300">
-          <p className="text-base leading-relaxed text-zinc-700 dark:text-[var(--subtext)]">
-            Saya adalah mahasiswa Universitas Indraprasta PGRI yang saat ini
-            aktif menempuh semester 5. Saya memiliki semangat belajar tinggi,
-            suka mengeksplorasi dunia teknologi, dan sering membuat proyek
-            pribadi sebagai sarana pengembangan diri. Dengan keinginan untuk
-            terus bertumbuh, saya siap untuk menghadapi tantangan baru di dunia
-            kerja maupun industri kreatif.
-          </p>
-
-          <div className="flex items-center justify-between flex-wrap gap-4 mt-8">
+        <div className="max-w-3xl mx-auto p-8 rounded-2xl border border-zinc-700 bg-white dark:bg-[var(--card)] shadow-md dark:shadow-none transition-all duration-300 relative overflow-hidden">
+          {/* Logo Selalu Tampil */}
+          <div className="flex justify-center mb-6">
             <img
               src={DataImage.LogoImage}
-              alt="Hero"
-              className="w-12 h-12 rounded-md hidden sm:block shadow"
+              alt="Logo"
+              className="w-16 h-16 sm:w-12 sm:h-12 rounded-md shadow"
             />
-            <div className="flex gap-8 text-zinc-900 dark:text-[var(--text)]">
+          </div>
+
+          {/* Deskripsi */}
+          <p className="text-[15.5px] leading-[1.7] tracking-wide text-black dark:text-[var(--subtext)] text-justify">
+            Saya adalah <strong>mahasiswa Universitas Indraprasta PGRI</strong>{" "}
+            yang saat ini aktif menempuh semester 5. Saya memiliki{" "}
+            <strong>semangat belajar tinggi</strong>, suka mengeksplorasi dunia
+            teknologi, dan sering membuat proyek pribadi sebagai sarana
+            pengembangan diri. Dengan{" "}
+            <span className="italic">keinginan untuk terus bertumbuh</span>,
+            saya siap untuk menghadapi tantangan baru di dunia kerja maupun
+            industri kreatif.
+          </p>
+
+          {/* Info Box */}
+          <div className="flex items-center justify-between flex-wrap gap-4 mt-8 text-zinc-900 dark:text-[var(--text)]">
+            <div className="flex gap-8 mx-auto sm:mx-0">
               <div>
                 <h1 className="text-2xl font-bold">
                   2<span>+</span>
