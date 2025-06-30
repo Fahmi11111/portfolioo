@@ -62,7 +62,7 @@ function App() {
       </div>
 
       {/* Tentang */}
-      <div
+     <div
         id="tentang"
         className="scroll-mt-20 mt-10 py-16 px-4 animate__animated animate__fadeInUp animate__delay-7s"
       >
@@ -77,17 +77,14 @@ function App() {
           </div>
 
           {/* Deskripsi */}
-          <p className="text-[15.5px] leading-[1.7] tracking-wide text-black dark:text-[var(--subtext)] text-justify">
-            Saya adalah <strong>mahasiswa Universitas Indraprasta PGRI</strong>{" "}
-            yang saat ini aktif menempuh semester 5. Saya memiliki{" "}
-            <strong>semangat belajar tinggi</strong>, suka mengeksplorasi dunia
-            teknologi, dan sering membuat proyek pribadi sebagai sarana
-            pengembangan diri. Dengan{" "}
-            <span className="italic">keinginan untuk terus bertumbuh</span>,
-            saya siap untuk menghadapi tantangan baru di dunia kerja maupun
-            industri kreatif.
+          <p className="text-base leading-relaxed text-zinc-900 dark:text-[var(--subtext)]">
+            Saya adalah mahasiswa Universitas Indraprasta PGRI yang saat ini
+            aktif menempuh semester 5. Saya memiliki semangat belajar tinggi,
+            suka mengeksplorasi dunia teknologi, dan sering membuat proyek
+            pribadi sebagai sarana pengembangan diri. Dengan keinginan untuk
+            terus bertumbuh, saya siap untuk menghadapi tantangan baru di dunia
+            kerja maupun industri kreatif.
           </p>
-
           {/* Info Box */}
           <div className="flex items-center justify-between flex-wrap gap-4 mt-8 text-zinc-900 dark:text-[var(--text)]">
             <div className="flex gap-8 mx-auto sm:mx-0">
@@ -109,7 +106,7 @@ function App() {
           </div>
         </div>
       </div>
-
+      
       {/* Tools */}
       <div
         id="tools"
