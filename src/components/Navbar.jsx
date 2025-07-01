@@ -4,109 +4,102 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [isDark, setIsDark] = useState(false);
+  const [themeClicked, setThemeClicked] = useState(false);
+  const [menuClicked, setMenuClicked] = useState(false);
 
-  useEffect(() => {
-    const root = document.documentElement;
-    const savedTheme = localStorage.getItem("theme");
-
-    const applyTheme = (theme) => {
-      root.classList.remove("theme-light", "theme-dark");
-      root.classList.add(theme);
-      setIsDark(theme === "theme-dark");
-    };
-
-    if (savedTheme) {
-      applyTheme(savedTheme);
-    } else {
-      const prefersDark = window.matchMedia(
-        "(prefers-color-scheme: dark)"
-      ).matches;
-      applyTheme(prefersDark ? "theme-dark" : "theme-light");
-    }
-
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const toggleTheme = () => {
-    const root = document.documentElement;
-    const currentTheme = root.classList.contains("theme-dark")
-      ? "theme-dark"
-      : "theme-light";
-    const nextTheme =
-      currentTheme === "theme-dark" ? "theme-light" : "theme-dark";
-
-    root.classList.remove("theme-dark", "theme-light");
-    root.classList.add(nextTheme);
-    setIsDark(nextTheme === "theme-dark");
-    localStorage.setItem("theme", nextTheme);
-  };
-
-  const scrollTo = (id) => {
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth" });
-      setIsOpen(false);
-    }
-  };
-
-  const menuItems = [
+  // Daftar menu
+  const menu = [
     { id: "beranda", label: "🏠 Beranda" },
     { id: "tentang", label: "👤 Tentang" },
     { id: "proyek", label: "💼 Proyek" },
     { id: "kontak", label: "📞 Kontak" },
   ];
 
+  useEffect(() => {
+    const root = document.documentElement;
+    const saved = localStorage.getItem("theme");
+    const defaultTheme =
+      saved ||
+      (window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "theme-dark"
+        : "theme-light");
+    root.classList.add(defaultTheme);
+    setIsDark(defaultTheme === "theme-dark");
+
+    const onScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  const toggleTheme = () => {
+    const root = document.documentElement;
+    const next = isDark ? "theme-light" : "theme-dark";
+    root.classList.remove("theme-light", "theme-dark");
+    root.classList.add(next);
+    localStorage.setItem("theme", next);
+    setIsDark(!isDark);
+
+    // Animasi klik
+    setThemeClicked(true);
+    setTimeout(() => setThemeClicked(false), 200);
+  };
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+    setMenuClicked(true);
+    setTimeout(() => setMenuClicked(false), 200);
+  };
+
+  const scrollTo = (id) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    setIsOpen(false);
+  };
+
   return (
     <nav
-      className={`fixed w-full top-0 z-50 backdrop-blur transition-all duration-300 ${
+      className={`fixed w-full top-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-white/30 dark:bg-zinc-900/30 border-b border-white/10 dark:border-zinc-700 shadow"
+          ? "bg-[var(--card)]/80 backdrop-blur border-b border-[var(--border)] shadow-md"
           : "bg-transparent"
       }`}
     >
       <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-        {/* Logo */}
-        <div className="text-2xl font-bold text-[var(--text)]">Portfolio</div>
+        <div className="text-lg font-bold text-[var(--text)]">Portfolio</div>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex items-center gap-8">
-          {menuItems.map((item, i) => (
-            <li key={i}>
+        <ul className="hidden md:flex gap-8 items-center">
+          {menu.map((m) => (
+            <li key={m.id}>
               <button
-                onClick={() => scrollTo(item.id)}
-                className="text-base text-[var(--subtext)] hover:text-blue-600 transition"
+                onClick={() => scrollTo(m.id)}
+                className="text-base text-[var(--text)] hover:text-blue-600 transition"
               >
-                {item.label}
+                {m.label}
               </button>
             </li>
           ))}
         </ul>
 
-        {/* Mobile Buttons */}
+        {/* Tombol Tema & Menu */}
         <div className="flex items-center gap-2">
-          {/* Theme Toggle */}
+          {/* Toggle Tema */}
           <button
             onClick={toggleTheme}
-            className="p-2 rounded-full border border-zinc-300 dark:border-zinc-600 text-xl transition-all duration-300 hover:rotate-12 hover:scale-110 hover:bg-zinc-100 dark:hover:bg-zinc-800"
+            className={`p-2 rounded-full border border-[var(--border)] text-xl text-[var(--text)] transition-all duration-200 transform ${
+              themeClicked ? "scale-90" : "hover:rotate-12 hover:scale-110"
+            } hover:bg-[var(--hover)]`}
             title="Toggle Theme"
           >
-            <span className="transition-all duration-300 ease-in-out">
-              {isDark ? "☀️" : "🌙"}
-            </span>
+            {isDark ? "☀️" : "🌙"}
           </button>
 
-          {/* Hamburger */}
+          {/* Tombol Hamburger (Mobile) */}
           <button
-            onClick={() => setIsOpen(!isOpen)}
-            className={`text-2xl text-[var(--text)] md:hidden transition-transform duration-300 transform ${
-              isOpen ? "rotate-90 scale-110" : ""
+            onClick={toggleMenu}
+            className={`text-2xl md:hidden text-[var(--text)] transition-transform duration-300 transform ${
+              menuClicked ? "scale-90" : "hover:scale-110"
             }`}
-            aria-label="Toggle Menu"
+            title="Menu"
           >
             {isOpen ? "✕" : "☰"}
           </button>
@@ -115,16 +108,14 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div
-          className={`md:hidden bg-[var(--card)] px-4 py-4 space-y-4 shadow-md rounded-b-xl menu-transition`}
-        >
-          {menuItems.map((item, i) => (
+        <div className="md:hidden bg-[var(--card)] px-4 py-4 space-y-3 shadow-md menu-transition rounded-b-xl">
+          {menu.map((m) => (
             <button
-              key={i}
-              onClick={() => scrollTo(item.id)}
-              className="block w-full text-left text-[var(--subtext)] hover:text-blue-600 transition"
+              key={m.id}
+              onClick={() => scrollTo(m.id)}
+              className="block w-full text-left text-[var(--text)] hover:text-blue-600 transition"
             >
-              {item.label}
+              {m.label}
             </button>
           ))}
         </div>
