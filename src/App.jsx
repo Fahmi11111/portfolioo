@@ -143,7 +143,7 @@ function App() {
       </div>
 
       {/* Tools */}
-      <div
+       <div
         id="tools"
         className="scroll-mt-20 mt-5 px-4 animate__animated animate__fadeInUp animate__delay-7s"
       >
@@ -161,6 +161,12 @@ function App() {
               onClick={(e) => {
                 createRipple(e);
                 playClickSound();
+                e.currentTarget.classList.add("active-hover");
+
+                // Hapus efek setelah 500ms agar tidak permanen
+                setTimeout(() => {
+                  e.currentTarget.classList.remove("active-hover");
+                }, 500);
               }}
               className="relative overflow-hidden text-left group focus:outline-none focus:ring-2 ring-blue-400/50 transition-all duration-300 ease-in-out active:scale-[0.97]"
             >
