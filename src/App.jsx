@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { TypeAnimation } from "react-type-animation";
 import DataImage from "./data";
 import { listTools, listProyek } from "./data";
 
@@ -60,6 +61,22 @@ function App() {
             <h1 className="text-3xl font-bold mb-5 text-[var(--text)] leading-tight">
               Halo 👋, saya Muhammad Fahmi
             </h1>
+
+            <TypeAnimation
+              sequence={[
+                "Punya Semangat Belajar Tinggi 🚀",
+                2000,
+                "Mahasiswa Informatika ✨",
+                2000,
+                "Aktif Mengembangkan Proyek Pribadi 💡",
+                2000,
+              ]}
+              wrapper="p"
+              cursor={true}
+              repeat={Infinity}
+              className="text-lg text-[var(--subtext)] font-extrabold mt-2"
+            />
+
             <p className="text-base leading-loose mb-5 text-[var(--text)]">
               Saya seorang mahasiswa aktif yang memiliki minat kuat di bidang
               pengembangan web dan desain digital. Antusias dalam mempelajari
@@ -143,7 +160,7 @@ function App() {
       </div>
 
       {/* Tools */}
-        <div
+      <div
         id="tools"
         className="scroll-mt-20 mt-5 px-4 animate__animated animate__fadeInUp animate__delay-7s"
       >
