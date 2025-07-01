@@ -43,3 +43,50 @@ body {
   padding: 0;
   font-family: "Poppins", sans-serif;
 }
+
+.active-hover h4 {
+  color: #60a5fa !important; /* text-blue-400 */
+}
+
+.active-hover img {
+  background-color: #374151 !important; /* bg-zinc-700 */
+}
+
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  transform: scale(0);
+  animation: rippleEffect 0.6s linear;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.ripple::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  transform: scale(0);
+  opacity: 0.4;
+  background: white;
+  animation: rippleEffect 0.6s linear;
+  pointer-events: none;
+  z-index: 1;
+}
+
+:root.theme-dark .ripple {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+:root.theme-light .ripple {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+@keyframes rippleEffect {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
