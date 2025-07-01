@@ -54,6 +54,13 @@ const Navbar = () => {
     }
   };
 
+  const menuItems = [
+    { id: "beranda", label: "🏠 Beranda" },
+    { id: "tentang", label: "👤 Tentang" },
+    { id: "proyek", label: "💼 Proyek" },
+    { id: "kontak", label: "📞 Kontak" },
+  ];
+
   return (
     <nav
       className={`fixed w-full top-0 z-50 backdrop-blur transition-all duration-300 ${
@@ -66,23 +73,23 @@ const Navbar = () => {
         {/* Logo */}
         <div className="text-2xl font-bold text-[var(--text)]">Portfolio</div>
 
-        {/* Desktop menu */}
+        {/* Desktop Menu */}
         <ul className="hidden md:flex items-center gap-8">
-          {["beranda", "tentang", "proyek", "kontak"].map((item, i) => (
+          {menuItems.map((item, i) => (
             <li key={i}>
               <button
-                onClick={() => scrollTo(item)}
+                onClick={() => scrollTo(item.id)}
                 className="text-base text-[var(--subtext)] hover:text-blue-600 transition"
               >
-                {item.charAt(0).toUpperCase() + item.slice(1)}
+                {item.label}
               </button>
             </li>
           ))}
         </ul>
 
-        {/* Mobile buttons */}
+        {/* Mobile Buttons */}
         <div className="flex items-center gap-2">
-          {/* Tombol toggle theme - tampil di semua layar */}
+          {/* Theme Toggle */}
           <button
             onClick={toggleTheme}
             className="p-2 rounded-full border border-zinc-300 dark:border-zinc-600 text-xl transition-all duration-300 hover:rotate-12 hover:scale-110 hover:bg-zinc-100 dark:hover:bg-zinc-800"
@@ -93,6 +100,7 @@ const Navbar = () => {
             </span>
           </button>
 
+          {/* Hamburger */}
           <button
             onClick={() => setIsOpen(!isOpen)}
             className={`text-2xl text-[var(--text)] md:hidden transition-transform duration-300 transform ${
@@ -105,22 +113,18 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile dropdown menu */}
+      {/* Mobile Menu */}
       {isOpen && (
         <div
-          className={`md:hidden bg-[var(--card)] px-4 py-4 space-y-4 shadow-md rounded-b-xl ${
-            isOpen
-              ? "scale-y-100 opacity-100"
-              : "scale-y-0 opacity-0 pointer-events-none"
-          } menu-transition`}
+          className={`md:hidden bg-[var(--card)] px-4 py-4 space-y-4 shadow-md rounded-b-xl menu-transition`}
         >
-          {["beranda", "tentang", "proyek", "kontak"].map((item, i) => (
+          {menuItems.map((item, i) => (
             <button
               key={i}
-              onClick={() => scrollTo(item)}
+              onClick={() => scrollTo(item.id)}
               className="block w-full text-left text-[var(--subtext)] hover:text-blue-600 transition"
             >
-              {item.charAt(0).toUpperCase() + item.slice(1)}
+              {item.label}
             </button>
           ))}
         </div>
