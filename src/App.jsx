@@ -108,40 +108,48 @@ function App() {
       </div>
       
       {/* Tools */}
-      <div
-        id="tools"
-        className="scroll-mt-20 mt-5 px-4 animate__animated animate__fadeInUp animate__delay-7s"
-      >
-        <h1 className="text-3xl font-bold mb-3 text-[var(--text)]">
-          Tools yang Digunakan
-        </h1>
-        <p className="text-base text-[var(--subtext)] max-w-2xl">
-          Berikut adalah beberapa tools yang saya gunakan:
-        </p>
+     <div
+  id="tools"
+  className="scroll-mt-20 mt-5 px-4 animate__animated animate__fadeInUp animate__delay-7s"
+>
+  <h1 className="text-3xl font-bold mb-3 text-[var(--text)]">
+    Tools yang Digunakan
+  </h1>
+  <p className="text-base text-[var(--subtext)] max-w-2xl">
+    Berikut adalah beberapa tools yang saya gunakan:
+  </p>
 
-        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {listTools.map((tool) => (
-            <div
-              key={tool.id}
-              data-aos="fade-up"
-              data-aos-delay="200"
-              className="flex items-center gap-4 p-4 border border-zinc-700 rounded-xl bg-[var(--card)] hover:scale-[1.02] transition-all duration-300 ease-in-out group"
-            >
-              <img
-                src={tool.gambar}
-                alt={tool.nama}
-                className="w-12 h-12 object-contain bg-zinc-900 p-2 rounded-lg shadow-sm group-hover:bg-zinc-700 transition"
-              />
-              <div>
-                <h4 className="font-semibold text-[var(--text)] text-base group-hover:text-blue-400 transition">
-                  {tool.nama}
-                </h4>
-                <p className="text-sm text-zinc-400">{tool.ket}</p>
-              </div>
-            </div>
-          ))}
+  <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    {listTools.map((tool) => (
+      <button
+        key={tool.id}
+        data-aos="fade-up"
+        data-aos-delay="200"
+        className="text-left group focus:outline-none focus:ring-2 ring-blue-400/50 transition-all duration-300 ease-in-out"
+        onTouchStart={(e) => {
+          e.currentTarget.classList.add("scale-[1.02]");
+          setTimeout(() => {
+            e.currentTarget.classList.remove("scale-[1.02]");
+          }, 300);
+        }}
+      >
+        <div className="flex items-center gap-4 p-4 border border-zinc-700 rounded-xl bg-[var(--card)] group-hover:scale-[1.02] transition-all duration-300 ease-in-out">
+          <img
+            src={tool.gambar}
+            alt={tool.nama}
+            className="w-12 h-12 object-contain bg-zinc-900 p-2 rounded-lg shadow-sm group-hover:bg-zinc-700 transition"
+          />
+          <div>
+            <h4 className="font-semibold text-[var(--text)] text-base group-hover:text-blue-400 transition">
+              {tool.nama}
+            </h4>
+            <p className="text-sm text-zinc-400">{tool.ket}</p>
+          </div>
         </div>
-      </div>
+      </button>
+    ))}
+  </div>
+</div>
 
       {/* Proyek */}
       <div
