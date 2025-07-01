@@ -1,7 +1,42 @@
+import { useEffect, useRef } from "react";
 import DataImage from "./data";
 import { listTools, listProyek } from "./data";
 
 function App() {
+  function createRipple(e) {
+    const button = e.currentTarget;
+    const circle = document.createElement("span");
+    const diameter = Math.max(button.clientWidth, button.clientHeight);
+    const radius = diameter / 2;
+
+    circle.style.width = circle.style.height = `${diameter}px`;
+    circle.style.left = `${
+      e.clientX - button.getBoundingClientRect().left - radius
+    }px`;
+    circle.style.top = `${
+      e.clientY - button.getBoundingClientRect().top - radius
+    }px`;
+    circle.classList.add("ripple");
+
+    const existingRipple = button.getElementsByClassName("ripple")[0];
+    if (existingRipple) existingRipple.remove();
+
+    button.appendChild(circle);
+  }
+
+  const audioRef = useRef(null);
+
+  useEffect(() => {
+    audioRef.current = new Audio("/mixkit-retro-game-notification-212.wav");
+  }, []);
+
+  function playClickSound() {
+    if (audioRef.current) {
+      audioRef.current.currentTime = 0;
+      audioRef.current.play();
+    }
+  }
+
   return (
     <main className="transition-all duration-300">
       {/* Beranda */}
@@ -62,7 +97,7 @@ function App() {
       </div>
 
       {/* Tentang */}
-     <div
+      <div
         id="tentang"
         className="scroll-mt-20 mt-10 py-16 px-4 animate__animated animate__fadeInUp animate__delay-7s"
       >
@@ -106,9 +141,9 @@ function App() {
           </div>
         </div>
       </div>
-      
+
       {/* Tools */}
-     <div
+      <div
         id="tools"
         className="scroll-mt-20 mt-5 px-4 animate__animated animate__fadeInUp animate__delay-7s"
       >
@@ -123,24 +158,20 @@ function App() {
           {listTools.map((tool) => (
             <button
               key={tool.id}
-              data-aos="fade-up"
-              data-aos-delay="200"
-              className="text-left group focus:outline-none focus:ring-2 ring-blue-400/50 transition-all duration-300 ease-in-out active:scale-[0.98]"
-              onTouchStart={(e) => {
-                e.currentTarget.classList.add("scale-[0.98]");
-                setTimeout(() => {
-                  e.currentTarget.classList.remove("scale-[0.98]");
-                }, 200);
+              onClick={(e) => {
+                createRipple(e);
+                playClickSound();
               }}
+              className="relative overflow-hidden text-left group focus:outline-none focus:ring-2 ring-blue-400/50 transition-all duration-300 ease-in-out active:scale-[0.97]"
             >
-              <div className="flex items-center gap-4 p-4 border border-zinc-700 rounded-xl bg-[var(--card)] transition-all duration-300 ease-in-out group-hover:scale-[1.02] focus:scale-[1.02] active:scale-[0.98]">
+              <div className="flex items-center gap-4 p-4 border border-zinc-700 rounded-xl bg-[var(--card)] transition-all duration-300">
                 <img
                   src={tool.gambar}
                   alt={tool.nama}
-                  className="w-12 h-12 object-contain bg-zinc-900 p-2 rounded-lg shadow-sm group-hover:bg-zinc-700 active:bg-zinc-800 transition"
+                  className="w-12 h-12 object-contain bg-zinc-900 p-2 rounded-lg shadow-sm group-hover:bg-zinc-700 transition"
                 />
                 <div>
-                  <h4 className="font-semibold text-[var(--text)] text-base group-hover:text-blue-400 focus:text-blue-400 transition">
+                  <h4 className="font-semibold text-[var(--text)] text-base group-hover:text-blue-400 transition">
                     {tool.nama}
                   </h4>
                   <p className="text-sm text-zinc-400">{tool.ket}</p>
