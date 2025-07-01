@@ -143,7 +143,7 @@ function App() {
       </div>
 
       {/* Tools */}
-       <div
+        <div
         id="tools"
         className="scroll-mt-20 mt-5 px-4 animate__animated animate__fadeInUp animate__delay-7s"
       >
@@ -155,7 +155,7 @@ function App() {
         </p>
 
         <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {listTools.map((tool) => (
+          {listTools.map((tool, index) => (
             <button
               key={tool.id}
               onClick={(e) => {
@@ -163,11 +163,12 @@ function App() {
                 playClickSound();
                 e.currentTarget.classList.add("active-hover");
 
-                // Hapus efek setelah 500ms agar tidak permanen
                 setTimeout(() => {
                   e.currentTarget.classList.remove("active-hover");
                 }, 500);
               }}
+              data-aos="zoom-in-up"
+              data-aos-delay={index * 100}
               className="relative overflow-hidden text-left group focus:outline-none focus:ring-2 ring-blue-400/50 transition-all duration-300 ease-in-out active:scale-[0.97]"
             >
               <div className="flex items-center gap-4 p-4 border border-zinc-700 rounded-xl bg-[var(--card)] transition-all duration-300">
