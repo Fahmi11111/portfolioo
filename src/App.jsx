@@ -45,9 +45,12 @@ function App() {
     <main className="transition-all duration-300 bg-[var(--bg)] text-[var(--text)]">
       {/* Beranda */}
       <section id="beranda" className="pt-24 px-4 scroll-mt-20">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 items-center gap-10">
+        <div
+          className="max-w-6xl mx-auto grid md:grid-cols-2 items-center gap-10"
+          data-aos="fade-up"
+        >
           {/* Teks */}
-          <div>
+          <div data-aos="fade-right" data-aos-delay="100">
             <div className="flex items-center gap-3 mb-5 bg-zinc-800 text-white w-fit p-3 rounded-2xl shadow">
               <img
                 src={DataImage.HeroImage}
@@ -67,7 +70,7 @@ function App() {
               sequence={[
                 "Punya Semangat Belajar Tinggi",
                 2000,
-                "Mahasiswa Informatika",
+                "Teknik Informatika",
                 2000,
                 "Aktif Mengembangkan Proyek Pribadi",
                 2000,
@@ -101,7 +104,11 @@ function App() {
           </div>
 
           {/* Gambar */}
-          <div className="mt-3 md:-mt-13">
+          <div
+            className="mt-3 md:-mt-13"
+            data-aos="fade-left"
+            data-aos-delay="300"
+          >
             <img
               src={DataImage.HeroImage}
               alt="Hero"
@@ -169,17 +176,19 @@ function App() {
               data-aos="zoom-in-up"
               data-aos-delay={index * 100}
             >
-              <div className="flex items-center gap-4 p-4 border border-[var(--border)] rounded-xl bg-[var(--card)] shadow hover:shadow-md">
+              <div className="flex gap-4 p-4 min-h-[100px] border border-[var(--border)] rounded-xl bg-[var(--card)] shadow hover:shadow-md">
                 <img
                   src={tool.gambar}
                   alt={tool.nama}
                   className="w-12 h-12 object-contain bg-zinc-900 p-2 rounded-lg group-hover:bg-zinc-700"
                 />
-                <div>
-                  <h4 className="font-semibold text-base group-hover:text-blue-400">
+                <div className="flex flex-col justify-start text-left -mt-1">
+                  <h4 className="font-semibold text-lg text-black dark:text-white group-hover:text-blue-500 transition-colors duration-200">
                     {tool.nama}
                   </h4>
-                  <p className="text-sm text-zinc-400">{tool.ket}</p>
+                  <p className="text-sm text-zinc-600 dark:text-zinc-400 tracking-wide leading-snug">
+                    {tool.ket}
+                  </p>
                 </div>
               </div>
             </button>
