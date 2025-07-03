@@ -70,8 +70,8 @@ export const listTools = [
 ];
 
 import Proyek1 from "/assets/proyek/screenshot11.png";
-import Proyek2 from "/assets/proyek/screenshot22.png";
-import Proyek3 from "/assets/proyek/screenshot33.png";
+import Proyek2 from "/assets/proyek/Screenshot 22.png";
+import Proyek3 from "/assets/proyek/Screenshot 33.png";
 import Proyek4 from "/assets/proyek/screenshot44.png";
 
 export const listProyek = [
