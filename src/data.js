@@ -85,17 +85,17 @@ export const listProyek = [
     dad: "100",
     URL: "/assets/Latte Luxe/index.html",
   },
-  {
-    id: 2,
-    gambar: Proyek2,
-    nama: "Website Undagan",
-    desk: `Website undangan digital yang elegan dan personal, menampilkan
-           informasi acara, peta lokasi, RSVP, dan galeri foto. Cocok untuk
-           pernikahan, ulang tahun, atau acara khusus lainnya.`,
-    tools: ["HTML", "CSS", "Javascript", "Audio"],
-    dad: "200",
-    URL: "/assets/Fahmi Wedding/index.html",
-  },
+  // {
+  //   id: 2,
+  //   gambar: Proyek2,
+  //   nama: "Website Undagan",
+  //   desk: `Website undangan digital yang elegan dan personal, menampilkan
+  //          informasi acara, peta lokasi, RSVP, dan galeri foto. Cocok untuk
+  //          pernikahan, ulang tahun, atau acara khusus lainnya.`,
+  //   tools: ["HTML", "CSS", "Javascript", "Audio"],
+  //   dad: "200",
+  //   URL: "/assets/Fahmi Wedding/index.html",
+  // },
   {
     id: 3,
     gambar: Proyek3,
