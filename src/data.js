@@ -132,6 +132,6 @@ export const listProyek = [
     desk: `Website yang menampilkan tentang isi data diri pengunjung yang ingin ke perpustkaan.`,
     tools: ["HTML", "CSS", "Javascript", "PHP"],
     dad: "500",
-    URL: "/assets/bukuperpus/register.php",
+    URL: "https://visitorhub.kesug.com/",
   },
 ];
