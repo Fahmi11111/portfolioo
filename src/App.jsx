@@ -90,7 +90,7 @@ function App() {
 
             <div className="flex gap-3 flex-wrap">
               <a
-                href="https://drive.google.com/file/d/1NNFjwjS7rZ8pPVYkhMVB7UmgxK5inzjL/view"
+                href="https://drive.google.com/file/d/1XDhMl12GHTNZU9FaU1NzBWUVb7S-po6R/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary"
