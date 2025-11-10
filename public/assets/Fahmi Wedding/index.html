@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Wedding</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sacramento&family=Work+Sans:wght@100;300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- simplyCountdown -->
+    <link rel="stylesheet" href="countdown/default.css" />
+    <script src="countdown/simplyCountdown.umd.js"></script>
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <section
+      id="hero"
+      class="hero w-100 h-100 px-3 py-5 mx-auto text-center d-flex justify-content-center align-items-center text-white"
+    >
+      <main>
+        <h4>Kepada <span>Bapak/Ibu/Saudara/i, </span></h4>
+        <h1 class="text-black display-4 display-md-3">Fahmi & Sekar</h1>
+        <p>Akan melangsungkan resepsi pernikahan dalam:</p>
+        <div class="simply-countdown"></div>
+        <a href="#home" class="btn btn-lg mt-4" onClick="enableScroll()"
+          >Lihat Undangan</a
+        >
+      </main>
+    </section>
+
+    <nav class="navbar navbar-expand-lg mynavbar fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Our Special Day</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Menu</h5>
+            <button
+              type="button"
+              class="btn-close text-reset"
+              data-bs-dismiss="offcanvas"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#info">Info</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#story">Story</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#rsvp">RSVP</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section id="home" class="home">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8 text-center">
+            <h2 class="h3 h1-md">Acara Pernikahan</h2>
+            <h3>
+              Diselenggarakan pada 1 Agustus 2030 di Bekasi/Jakarta, Jawa Barat.
+            </h3>
+            <p>
+              Oleh karena itu, dengan segala hormat, kami bermaksud untuk
+              mengundang Bapak/Ibu, Saudara/i, untuk hadir pada acara pernikahan
+              kami.
+            </p>
+          </div>
+        </div>
+
+        <div class="row couple">
+          <div class="col-lg-6">
+            <div class="row">
+              <div class="col-8 text-end">
+                <h3>Muhammad Fahmi</h3>
+                <p>
+                  Pria ketiga dari bapak fulan yang sederhana penuh semangat,
+                  memiliki sifat penyayang dan bertanggung jawab. Dengan niat
+                  tulus ingin membangun keluarga yang sakinah, mawaddah, dan
+                  warahmah.
+                </p>
+                <p>
+                  Putra dari Bpk. Utoyo <br />
+                  dan <br />
+                  Ibu Kusniyati
+                </p>
+              </div>
+              <div class="col-4">
+                <img
+                  src="img/1.jpg"
+                  alt="Fahmi"
+                  class="img-responsive rounded-circle"
+                />
+              </div>
+            </div>
+          </div>
+
+          <span class="heart"><i class="bi bi-heart-fill"></i></span>
+
+          <div class="col-lg-6">
+            <div class="row">
+              <div class="col-4">
+                <img
+                  src="img/2.jpg"
+                  alt="Sekar"
+                  class="img-responsive rounded-circle"
+                />
+              </div>
+              <div class="col-8">
+                <h3>Fadia Sekar</h3>
+                <p>
+                  Perempuan ketiga dari bapak Jumadi yang baik, lembut, ceria,
+                  dan penuh kasih sayang. Bertekad menemani dan mendampingi
+                  pasangan dalam suka maupun duka.
+                </p>
+                <p>
+                  Putra dari Bpk. Jumadi <br />
+                  dan <br />
+                  Ibu Hartini
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="info" class="info">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-10 text-center">
+            <h2>Informasi Acara</h2>
+            <p class="alamat">
+              Alamat:Gedung Angkasa Pura Kranji. <br />
+              Jl. Jend. Sudirman No.99A, RT.001/RW.007, Kranji, Kec. Bekasi
+              Barat, Kota Bekasi, Jawa Barat 17135
+            </p>
+
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.439100679313!2d107.003222!3d-6.205403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e699267b5a3519f%3A0xf9a9dc15c6a8df8c!2sGedung%20Angkasa%20Pura%20Kranji!5e0!3m2!1sid!2sid!4v1693486483694"
+              width="100%"
+              height="250"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+
+            <a
+              href="https://maps.app.goo.gl/3Yyumd4ghMvQAjL56"
+              target="_blank"
+              class="btn btn-light btn-sm my-3"
+              >Klik untuk membuka peta</a
+            >
+            <p class="description">
+              Diharapkan untuk tidak salah alamat dan tanggal. Manakala tiba di
+              tujuan namun tidak ada tanda-tanda sedang dilangsungkan
+              pernikahan, boleh jadi Anda salah jadwal, atau salah tempat.
+            </p>
+          </div>
+        </div>
+
+        <div class="row justify-content-center mt-4">
+          <div class="col-md-5 col-10">
+            <div class="card text-center text-bg-light mb-5">
+              <div class="card-header">Akad Nikah</div>
+              <div class="card-body">
+                <div class="row justify-content-center">
+                  <div class="col-md-6">
+                    <i class="bi bi-clock d-block"></i>
+                    <span>08.00 - 10.00</span>
+                  </div>
+                  <div class="col-md-6">
+                    <i class="bi bi-calendar3 d-block"></i>
+                    <span>Minggu, 4 Agustus 2030</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer">
+                Saat acara akad diharapkan untuk kondusif menjaga kekhidmatan
+                dan kekhusyuan seluruh prosesi.
+              </div>
+            </div>
+          </div>
+          <div class="col-md-5 col-10">
+            <div class="card text-center text-bg-light">
+              <div class="card-header">Resepsi</div>
+              <div class="card-body">
+                <div class="row justify-content-center">
+                  <div class="col-md-6">
+                    <i class="bi bi-clock d-block"></i>
+                    <span>11.00 - selesai</span>
+                  </div>
+                  <div class="col-md-6">
+                    <i class="bi bi-calendar3 d-block"></i>
+                    <span>Minggu, 4 Agustus 2030</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer">
+                Saat acara akad diharapkan untuk kondusif menjaga kekhidmatan
+                dan kekhusyuan seluruh prosesi.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="story" class="story">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-10 text-center">
+            <span>Bagaimana Cinta Kami Bersemi</span>
+            <h2>Cerita Kami</h2>
+            <p>
+              Perjalanan kami bukan sekadar kebetulan. Ini adalah kisah tentang
+              dua insan yang dipertemukan oleh takdir dan dipersatukan oleh
+              cinta serta keyakinan.
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <ul class="timeline">
+              <li>
+                <div
+                  class="timeline-image"
+                  style="background-image: url(img/sman23.jpg)"
+                ></div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h3>Pertama Bertemu</h3>
+                    <span>1 Juni 2000</span>
+                  </div>
+                  <div class="timeline-body">
+                    <p>
+                      Kami pertama kali bertemu di coffeshop. Awalnya hanya
+                      berteman biasa yang ingin kenal leibh jauh, namun sejak
+                      hari itu, kami mulai mengenal satu sama lain lebih dekat.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline-inverted">
+                <div
+                  class="timeline-image"
+                  style="background-image: url(https://picsum.photos/300/300)"
+                ></div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h3>Mulai Serius</h3>
+                    <span>1 Januari 2005</span>
+                  </div>
+                  <div class="timeline-body">
+                    <p>
+                      Setelah melalui banyak momen suka dan duka, kami
+                      memutuskan untuk menjalani hubungan dengan lebih serius.
+                      Kami saling belajar, tumbuh, dan mendukung satu sama lain.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div
+                  class="timeline-image"
+                  style="background-image: url(https://picsum.photos/301/301)"
+                ></div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h3>Tunangan</h3>
+                    <span>7 November 2009</span>
+                  </div>
+                  <div class="timeline-body">
+                    Dengan restu keluarga dan harapan baik dari orang-orang
+                    tercinta, kami melangkah ke jenjang yang lebih serius:
+                    pertunangan. Sebuah ikrar awal untuk membangun rumah tangga
+                    bersama.
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="gallery">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-10 text-center">
+            <span>Memori Kisah Kami</span>
+            <h2>Galeri Foto</h2>
+            <p>
+              Setiap momen bersama adalah bagian dari kisah cinta kami. Inilah
+              potret-potret kenangan yang merekam tawa, perjalanan, dan cinta
+              yang tumbuh seiring waktu.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1 justify-content-center"
+        >
+          <div class="col mt-3">
+            <a
+              href="img/gallery/1.jpg"
+              data-toggle="lightbox"
+              data-caption="Fahmi & Sekar 1"
+              data-gallery="mygallery"
+            >
+              <img
+                src="img/gallery/thumbnail/1.jpg"
+                alt="Fahmi & Sekar 1"
+                class="img-fluid w-100 rounded"
+              />
+            </a>
+          </div>
+          <div class="col mt-3">
+            <a
+              href="img/gallery/3.jpg"
+              data-toggle="lightbox"
+              data-caption="Fahmi & Sekar 2"
+              data-gallery="mygallery"
+            >
+              <img
+                src="img/gallery/thumbnail/3.jpg"
+                alt="Fahmi & Sekar 2"
+                class="img-fluid w-100 rounded"
+              />
+            </a>
+          </div>
+          <div class="col mt-3">
+            <a
+              href="img/gallery/5.jpeg"
+              data-toggle="lightbox"
+              data-caption="Fahmi & Sekar 3"
+              data-gallery="mygallery"
+            >
+              <img
+                src="img/gallery/thumbnail/5.jpeg"
+                alt="Fahmi & Sekar 3"
+                class="img-fluid w-100 rounded"
+              />
+            </a>
+          </div>
+          <div class="col mt-3">
+            <a
+              href="iimg/gallery/6.jpeg"
+              data-toggle="lightbox"
+              data-caption="Fahmi & Sekar 4"
+              data-gallery="mygallery"
+            >
+              <img
+                src="img/gallery/thumbnail/6.jpeg"
+                alt="Fahmi & Sekar 4"
+                class="img-fluid w-100 rounded"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="rsvp" class="rsvp py-5 bg-transparent text-white">
+      <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <h2
+            class="fw-bold"
+            style="font-family: 'Sacramento', cursive; font-size: 3rem"
+          >
+            Konfirmasi Kehadiran
+          </h2>
+          <p class="fs-5">Silakan isi form di bawah ini untuk RSVP.</p>
+        </div>
+
+        <form
+          action="https://formspree.io/f/mgvyqzeg"
+          method="POST"
+          class="row g-4 justify-content-center"
+        >
+          <!-- Formsubmit Settings -->
+          <input type="hidden" name="_captcha" value="false" />
+
+          <!-- Nama -->
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <label for="nama" class="form-label">Nama Lengkap</label>
+            <input
+              type="text"
+              name="Nama"
+              id="nama"
+              class="form-control form-control-lg"
+              placeholder="Masukkan nama Anda"
+              required
+            />
+          </div>
+
+          <!-- Jumlah -->
+          <div class="col-md-2" data-aos="fade-up" data-aos-delay="200">
+            <label for="jumlah" class="form-label">Jumlah Tamu</label>
+            <input
+              type="number"
+              name="Jumlah"
+              id="jumlah"
+              class="form-control form-control-lg"
+              min="1"
+              max="5"
+              value="1"
+              required
+            />
+          </div>
+
+          <!-- Status Kehadiran -->
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <label for="status" class="form-label">Kehadiran</label>
+            <select
+              name="Konfirmasi"
+              id="status"
+              class="form-select form-select-lg"
+              required
+            >
+              <option value="">Pilih salah satu</option>
+              <option value="Hadir">Hadir</option>
+              <option value="Tidak Hadir">Tidak Hadir</option>
+            </select>
+          </div>
+
+          <!-- Tombol -->
+          <div
+            class="col-12 text-center mt-4"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <button type="submit" class="btn btn-primary px-5 py-2 fs-5 shadow">
+              Kirim
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section id="gifts" class="gifts">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-10 text-center">
+            <span>ungkapan tanda kasih</span>
+            <h2>Kirim Hadiah</h2>
+            <p>
+              Cinta dan doa adalah anugerah terbaik, namun jika ingin berbagi
+              lebih, kami menerimanya dengan penuh syukur.
+            </p>
+          </div>
+        </div>
+
+        <div class="row justify-content-center text-center">
+          <div class="col-md-6">
+            <ul class="list-group">
+              <li class="list-group-item">
+                <div class="fw-bold">Bank Jago</div>
+                123456789 - MUHAMMAD Fahmi
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col text-center">
+            <small class="block"
+              >&copy; 2025 Wedding. All Rights Reserved.</small
+            >
+
+            <ul class="mt-3">
+              <li>
+                <a href="https://www.instagram.com/mfahmiiiiii_"
+                  ><i class="bi bi-instagram"></i
+                ></a>
+              </li>
+              <li>
+                <a href="https://www.tiktok.com/@flyingsolooooo"
+                  ><i class="bi bi-tiktok"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div id="audio-container">
+      <audio id="song" autoplay loop>
+        <source
+          src="audio/Nyoman Paul, Andi Rianto – The Way You Look At Me (Official Music Video).mp3"
+          type="audio/mp3"
+        />
+      </audio>
+
+      <div class="audio-icon-wrapper" style="display: none">
+        <i class="bi bi-disc"></i>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.5/dist/index.bundle.min.js"></script>
+
+    <script>
+      simplyCountdown(".simply-countdown", {
+        year: 2030, // required
+        month: 8, // required
+        day: 4, // required
+        hours: 8, // Default is 0 [0-23] integer
+        words: {
+          //words displayed into the countdown
+          days: { singular: "hari", plural: "hari" },
+          hours: { singular: "jam", plural: "jam" },
+          minutes: { singular: "menit", plural: "menit" },
+          seconds: { singular: "detik", plural: "detik" },
+        },
+      });
+    </script>
+
+    <script>
+      const stickyTop = document.querySelector(".sticky-top");
+      const offcanvas = document.querySelector(".offcanvas");
+
+      offcanvas.addEventListener("show.bs.offcanvas", function () {
+        stickyTop.style.overflow = "visible";
+      });
+
+      offcanvas.addEventListener("hidden.bs.offcanvas", function () {
+        stickyTop.style.overflow = "hidden";
+      });
+    </script>
+
+    <script>
+      const rootElement = document.querySelector(":root");
+      const audioIconWrapper = document.querySelector(".audio-icon-wrapper");
+      const audioIcon = document.querySelector(".audio-icon-wrapper i");
+      const song = document.querySelector("#song");
+      let isPlaying = false;
+
+      function disableScroll() {
+        scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+
+        window.onscroll = function () {
+          window.scrollTo(scrollTop, scrollLeft);
+        };
+
+        rootElement.style.scrollBehavior = "auto";
+      }
+
+      function enableScroll() {
+        window.onscroll = function () {};
+        rootElement.style.scrollBehavior = "smooth";
+        // localStorage.setItem('opened', 'true');
+        playAudio();
+      }
+
+      function playAudio() {
+        song.volume = 0.1;
+        audioIconWrapper.style.display = "flex";
+        song.play();
+        isPlaying = true;
+      }
+
+      audioIconWrapper.onclick = function () {
+        if (isPlaying) {
+          song.pause();
+          audioIcon.classList.remove("bi-disc");
+          audioIcon.classList.add("bi-pause-circle");
+        } else {
+          song.play();
+          audioIcon.classList.add("bi-disc");
+          audioIcon.classList.remove("bi-pause-circle");
+        }
+
+        isPlaying = !isPlaying;
+      };
+
+      // if (!localStorage.getItem('opened')) {
+      //   disableScroll();
+      // }
+      disableScroll();
+    </script>
+    <script>
+      window.addEventListener("load", function () {
+        const form = document.getElementById("my-form");
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          const data = new FormData(form);
+          const action = e.target.action;
+          fetch(action, {
+            method: "POST",
+            body: data,
+          }).then(() => {
+            alert("Konfirmasi kehadiran berhasil terkirim!");
+          });
+        });
+      });
+    </script>
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const nama = urlParams.get("n") || "";
+      const pronoun = urlParams.get("p") || "Bapak/Ibu/Saudara/i";
+      const namaContainer = document.querySelector(".hero h4 span");
+      namaContainer.innerText = `${pronoun} ${nama},`.replace(/ ,$/, ",");
+
+      document.querySelector("#nama").value = nama;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    transition: background 0.4s, color 0.4s;
+  }
+  body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+:root.theme-light {
+  --text: #1e293b;
+  --subtext: #475569;
+  --bg: #f9fafb;
+  --card: #ffffff;
+  --hover: #f1f5f9;
+  --border: #e2e8f0;
+}
+:root.theme-dark {
+  --text: #e2e8f0;
+  --subtext: #94a3b8;
+  --bg: #0f172a;
+  --card: #1e293b;
+  --hover: #1e293b;
+  --border: #334155;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+.nav-scrolled {
+  backdrop-filter: blur(12px);
+  background-color: rgba(255, 255, 255, 0.7);
+}
+.theme-dark .nav-scrolled {
+  background-color: rgba(15, 23, 42, 0.7);
+}
+
+.menu-transition {
+  @apply transition-all duration-300 origin-top transform;
+}
+.theme-toggle-icon {
+  transition: transform 0.3s ease;
+}
+.theme-toggle-icon:hover {
+  transform: rotate(20deg) scale(1.1);
+}
+
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: rippleEffect 0.6s linear;
+  pointer-events: none;
+}
+.ripple::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  animation: rippleEffect 0.6s linear;
+}
+:root.theme-light .ripple {
+  background: rgba(0, 0, 0, 0.2);
+}
+:root.theme-dark .ripple {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+@keyframes rippleEffect {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+.btn-primary {
+  @apply px-5 py-2 rounded-full font-medium bg-blue-600 text-white transition shadow;
+}
+.btn-primary:hover {
+  @apply bg-blue-700 shadow-lg;
+}
+
+.card {
+  @apply rounded-xl border shadow transition transform;
+  background-color: var(--card);
+  border-color: var(--border);
+}
+.card:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+}
+
+input,
+textarea {
+  @apply block w-full p-3 rounded border transition;
+  background-color: var(--card);
+  color: var(--text);
+  border-color: var(--border);
+}
+input:focus,
+textarea:focus {
+  @apply border-blue-600 ring ring-blue-200;
+}
