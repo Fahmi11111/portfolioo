@@ -506,3 +506,203 @@ footer li {
     top: 31px;
   }
 }
+/* ============================= */
+/* SMALL PHONE FIX (iPhone mini) */
+/* ============================= */
+@media (max-width: 390px) {
+  html {
+    font-size: 55%;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  /* ===== HERO ===== */
+  .hero h1 {
+    font-size: 4.2rem;
+    line-height: 1.1;
+  }
+
+  .hero h4 {
+    font-size: 1.4rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  .hero main {
+    padding: 0 1.2rem;
+  }
+
+  /* ===== NAVBAR ===== */
+  .mynavbar .navbar-brand {
+    font-size: 2.2rem;
+  }
+
+  .mynavbar .nav-link {
+    font-size: 1.6rem;
+    padding: 0.8rem 0;
+  }
+
+  /* ===== HOME SECTION ===== */
+  .home {
+    padding-top: 12rem;
+    padding-bottom: 4rem;
+  }
+
+  .home h2,
+  .info h2,
+  .story h2,
+  .gallery h2,
+  .rsvp h2,
+  .gifts h2 {
+    font-size: 3.8rem;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  .home p {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .home .couple {
+    margin-top: 4rem;
+  }
+
+  .home .couple h3 {
+    font-size: 2.1rem;
+    text-align: center;
+  }
+
+  .home .heart {
+    display: none;
+  }
+
+  /* ===== INFO ===== */
+  .info {
+    padding-top: 7rem;
+    padding-bottom: 6rem;
+  }
+
+  .info .alamat,
+  .info .description {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .info .card-body {
+    font-size: 1.2rem;
+  }
+
+  /* ===== TIMELINE (FIX PALING PENTING) ===== */
+  .timeline::before {
+    left: 20px;
+  }
+
+  .timeline li .timeline-image {
+    width: 70px;
+    height: 70px;
+    left: 20px;
+    margin-left: 0;
+    top: 10px;
+  }
+
+  .timeline li .timeline-panel {
+    width: calc(100% - 100px);
+    float: right;
+    padding: 1.2rem;
+    transform: none;
+  }
+
+  .timeline li .timeline-panel::before {
+    top: 25px;
+  }
+
+  .timeline li .timeline-panel::after {
+    top: 26px;
+  }
+
+  /* ===== GALLERY ===== */
+  .gallery p {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  /* ===== RSVP ===== */
+  .rsvp {
+    padding-top: 7rem;
+    padding-bottom: 6rem;
+  }
+
+  .rsvp h2 {
+    font-size: 3.5rem;
+    text-align: center;
+  }
+
+  .rsvp p {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .rsvp form {
+    padding: 0 1rem;
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  footer li {
+    display: inline-block;
+    margin: 0.3rem;
+  }
+
+  /* ===== AUDIO ICON ===== */
+  .audio-icon-wrapper {
+    width: 3.2rem;
+    height: 3.2rem;
+    font-size: 3.2rem;
+    bottom: 1.5rem;
+    right: 1.2rem;
+  }
+  .simply-countdown {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: nowrap;
+    margin-top: 2rem;
+  }
+
+  .simply-countdown > .simply-section {
+    width: 72px;
+    height: 72px;
+    padding: 0 !important;
+    border-radius: 50%;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--pink);
+    flex-shrink: 0;
+  }
+
+  .simply-countdown > .simply-section .simply-amount {
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: 1.1;
+    color: white;
+  }
+
+  .simply-countdown > .simply-section .simply-word {
+    font-size: 0.9rem;
+    margin-top: 0.2rem;
+    color: white;
+    text-transform: lowercase;
+  }
+}

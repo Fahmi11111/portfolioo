@@ -14,8 +14,8 @@ import Tools4 from "/assets/tools/tailwind.png";
 import Tools5 from "/assets/tools/bootstrap.png";
 import Tools6 from "/assets/tools/js.png";
 import Tools7 from "/assets/tools/nodejs.png";
-import Tools7 from "/assets/tools/php.png";
-import Tools8 from "/assets/tools/github.png";
+import Tools8 from "/assets/tools/php.png";
+import Tools9 from "/assets/tools/github.png";
 
 export const listTools = [
   {
@@ -94,17 +94,17 @@ export const listProyek = [
     dad: "100",
     URL: "/assets/Latte Luxe/index.html",
   },
-  // {
-  //   id: 2,
-  //   gambar: Proyek2,
-  //   nama: "Website Undagan",
-  //   desk: `Website undangan digital yang elegan dan personal, menampilkan
-  //          informasi acara, peta lokasi, RSVP, dan galeri foto. Cocok untuk
-  //          pernikahan, ulang tahun, atau acara khusus lainnya.`,
-  //   tools: ["HTML", "CSS", "Javascript", "Audio"],
-  //   dad: "200",
-  //   URL: "/assets/Fahmi Wedding/index.html",
-  // },
+  {
+    id: 2,
+    gambar: Proyek2,
+    nama: "Website Undagan",
+    desk: `Website undangan digital yang elegan dan personal, menampilkan
+           informasi acara, peta lokasi, RSVP, dan galeri foto. Cocok untuk
+           pernikahan, ulang tahun, atau acara khusus lainnya.`,
+    tools: ["HTML", "CSS", "Javascript", "Audio"],
+    dad: "200",
+    URL: "/assets/Fahmi Wedding/index.html",
+  },
   {
     id: 3,
     gambar: Proyek3,
@@ -132,6 +132,6 @@ export const listProyek = [
     desk: `Website yang menampilkan tentang isi data diri pengunjung yang ingin ke perpustkaan.`,
     tools: ["HTML", "CSS", "Javascript", "PHP"],
     dad: "500",
-    URL: "/assets/Nusantara/index.html",
+    URL: "https://visitorhub.kesug.com/",
   },
 ];
