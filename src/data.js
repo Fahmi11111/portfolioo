@@ -82,6 +82,7 @@ import Proyek2 from "/assets/proyek/Screenshot (451).png";
 import Proyek3 from "/assets/proyek/Screenshot 33.png";
 import Proyek4 from "/assets/proyek/screenshot44.png";
 import Proyek5 from "/assets/proyek/Screenshot 188.png";
+import Proyek6 from "/assets/proyek/Screenshot (593).png";
 
 export const listProyek = [
   {
@@ -133,5 +134,21 @@ export const listProyek = [
     tools: ["HTML", "CSS", "Javascript", "PHP"],
     dad: "500",
     URL: "https://visitorhub.kesug.com/",
+  },
+  {
+    id: 6,
+    gambar: Proyek6,
+    nama: "Aniverse – Website Anime Explorer",
+    desk: `Website anime berbasis Next.js yang memungkinkan pengguna mencari anime, melihat detail, menambahkan ke koleksi pribadi, serta berinteraksi melalui komentar. Data diambil dari API MyAnimeList (Jikan) dan dilengkapi fitur autentikasi menggunakan OAuth.`,
+    tools: [
+      "Next.js",
+      "Tailwind CSS",
+      "Prisma",
+      "PostgreSQL",
+      "NextAuth",
+      "API Jikan",
+    ],
+    dad: "2026",
+    URL: "https://aniverse-gf7t.onrender.com/",
   },
 ];
