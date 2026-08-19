@@ -1,13 +1,9 @@
+// 1. IMPORT ASSETS
+// Hero & Logo
 import HeroImage from "/assets/fahmi.png";
 import LogoImage from "/assets/unindra.png";
 
-const Image = {
-  HeroImage,
-  LogoImage,
-};
-
-export default Image;
-
+// Tools & Technologies
 import Tools1 from "/assets/tools/vscode.png";
 import Tools2 from "/assets/tools/reactjs.png";
 import Tools4 from "/assets/tools/tailwind.png";
@@ -17,66 +13,7 @@ import Tools7 from "/assets/tools/nodejs.png";
 import Tools8 from "/assets/tools/php.png";
 import Tools9 from "/assets/tools/github.png";
 
-export const listTools = [
-  {
-    id: 1,
-    gambar: Tools1,
-    nama: "Visual Studio Code",
-    ket: "Code Editor",
-    dad: "100",
-  },
-  {
-    id: 2,
-    gambar: Tools2,
-    nama: "React JS",
-    ket: "Framework",
-    dad: "200",
-  },
-
-  {
-    id: 4,
-    gambar: Tools4,
-    nama: "Tailwind CSS",
-    ket: "Framework",
-    dad: "400",
-  },
-  {
-    id: 5,
-    gambar: Tools5,
-    nama: "Bootstrap",
-    ket: "Framework",
-    dad: "500",
-  },
-  {
-    id: 6,
-    gambar: Tools6,
-    nama: "Javascript",
-    ket: "Language",
-    dad: "600",
-  },
-  {
-    id: 7,
-    gambar: Tools7,
-    nama: "Node JS",
-    ket: "Javascript Runtime",
-    dad: "700",
-  },
-  {
-    id: 8,
-    gambar: Tools8,
-    nama: "PHP My Admin",
-    ket: "PHP",
-    dad: "800",
-  },
-  {
-    id: 9,
-    gambar: Tools9,
-    nama: "Github",
-    ket: "Repository",
-    dad: "900",
-  },
-];
-
+// Projects
 import Proyek1 from "/assets/proyek/screenshot11.png";
 import Proyek2 from "/assets/proyek/Screenshot (451).png";
 import Proyek3 from "/assets/proyek/Screenshot 33.png";
@@ -84,71 +21,221 @@ import Proyek4 from "/assets/proyek/screenshot44.png";
 import Proyek5 from "/assets/proyek/Screenshot 188.png";
 import Proyek6 from "/assets/proyek/Screenshot-593.png";
 
+// 2. EXPORT DATA
+
+// Image Object
+const DataImage = {
+  HeroImage,
+  LogoImage,
+};
+export default DataImage;
+
+// List Tools & Tech Stack
+export const listTools = [
+  {
+    id: 1,
+    gambar: Tools1,
+    nama: "Visual Studio Code",
+    ket: "Primary Code Editor",
+    dad: "150",
+  },
+  {
+    id: 2,
+    gambar: Tools2,
+    nama: "React JS",
+    ket: "Frontend Library",
+    dad: "300",
+  },
+  {
+    id: 4,
+    gambar: Tools4,
+    nama: "Tailwind CSS",
+    ket: "Utility-First CSS",
+    dad: "450",
+  },
+  {
+    id: 5,
+    gambar: Tools5,
+    nama: "Bootstrap",
+    ket: "CSS Framework",
+    dad: "600",
+  },
+  {
+    id: 6,
+    gambar: Tools6,
+    nama: "JavaScript",
+    ket: "Programming Language",
+    dad: "750",
+  },
+  {
+    id: 7,
+    gambar: Tools7,
+    nama: "Node JS",
+    ket: "JavaScript Runtime",
+    dad: "900",
+  },
+  {
+    id: 8,
+    gambar: Tools8,
+    nama: "phpMyAdmin",
+    ket: "Database Management",
+    dad: "1050",
+  },
+  {
+    id: 9,
+    gambar: Tools9,
+    nama: "GitHub",
+    ket: "Version Control & Hosting",
+    dad: "1200",
+  },
+];
+
+// List Proyek
 export const listProyek = [
   {
     id: 1,
     gambar: Proyek1,
-    nama: "Website Semi Warkop",
-    desk: `Website pemesanan untuk kedai kopi modern dengan fitur keranjang,
-           sistem checkout terintegrasi, serta antarmuka yang responsif.`,
-    tools: ["HTML", "CSS", "Javascript"],
-    dad: "100",
+    nama: "Latte Luxe – Web Semi Warkop",
+    desk: "Platform pemesanan kedai kopi modern berdesain interaktif. Dilengkapi fitur keranjang belanja, kalkulasi pesanan otomatis, serta tata letak responsif untuk kenyamanan pengguna.",
+    tools: ["HTML5", "CSS3", "JavaScript"],
+    dad: "200",
     URL: "/assets/Latte Luxe/index.html",
   },
   {
     id: 2,
     gambar: Proyek2,
-    nama: "Website Undagan",
-    desk: `Website undangan digital yang elegan dan personal, menampilkan
-           informasi acara, peta lokasi, RSVP, dan galeri foto. Cocok untuk
-           pernikahan, ulang tahun, atau acara khusus lainnya.`,
-    tools: ["HTML", "CSS", "Javascript", "Audio"],
-    dad: "200",
+    nama: "Website Undangan Digital Elegan",
+    desk: "Website undangan digital eksklusif yang menyajikan informasi acara, integrasi peta lokasi, formulir RSVP interaktif, pemutar musik latar, serta galeri momen bersejarah.",
+    tools: ["HTML5", "CSS3", "JavaScript", "Audio API"],
+    dad: "400",
     URL: "/assets/Fahmi Wedding/index.html",
   },
   {
     id: 3,
     gambar: Proyek3,
-    nama: "Website Animasi Karakter",
-    desk: `Website animasi interaktif dengan karakter Dota 2, menampilkan
-           interaksi dan desain responsif untuk pengalaman pengguna yang
-           menarik.`,
-    tools: ["HTML", "CSS", "Javascript"],
-    dad: "300",
+    nama: "Dota 2 – Web Animasi Karakter",
+    desk: "Showcase animasi web interaktif bertema karakter Dota 2. Menyoroti efek visual dinamis, transisi halus, dan desain responsif yang menghidupkan pengalaman antarmuka pengembang.",
+    tools: ["HTML5", "CSS3", "JavaScript"],
+    dad: "600",
     URL: "/assets/Animasi/index.html",
   },
   {
     id: 4,
     gambar: Proyek4,
-    nama: "Website Nusantara Indonesia",
-    desk: `Website yang menampilkan tentang wisata indonesia dan indahnya.`,
-    tools: ["HTML", "CSS", "Javascript", "Video"],
-    dad: "400",
+    nama: "Nusantara – Portal Wisata Indonesia",
+    desk: "Platform eksplorasi keindahan destinasi wisata dan kekayaan budaya Indonesia. Dilengkapi dukungan media video interaktif dan navigasi visual yang memanjakan mata.",
+    tools: ["HTML5", "CSS3", "JavaScript", "HTML Video"],
+    dad: "800",
     URL: "/assets/Nusantara/index.html",
   },
   {
     id: 5,
     gambar: Proyek5,
-    nama: "Website Buku Pengunjung Perpustakaan",
-    desk: `Website yang menampilkan tentang isi data diri pengunjung yang ingin ke perpustkaan.`,
-    tools: ["HTML", "CSS", "Javascript", "PHP"],
-    dad: "500",
+    nama: "VisitorHub – Digital Library Guestbook",
+    desk: "Sistem buku tamu digital perpustakaan berbasis web untuk mencatat data kunjungan secara terstruktur, cepat, dan aman menggunakan pemrosesan server-side.",
+    tools: ["HTML5", "CSS3", "JavaScript", "PHP", "MySQL"],
+    dad: "1000",
     URL: "https://visitorhub.kesug.com/",
   },
   {
     id: 6,
     gambar: Proyek6,
     nama: "Aniverse – Website Anime Explorer",
-    desk: `Website anime berbasis Next.js yang memungkinkan pengguna mencari anime, melihat detail, menambahkan ke koleksi pribadi, serta berinteraksi melalui komentar. Data diambil dari API MyAnimeList (Jikan) dan dilengkapi fitur autentikasi menggunakan OAuth.`,
+    desk: "Platform penjelajah anime berbasis Next.js modern dengan pencarian real-time via API MyAnimeList (Jikan), koleksi favorit pribadi, autentikasi OAuth, dan fitur diskusi interaktif.",
     tools: [
       "Next.js",
       "Tailwind CSS",
       "Prisma",
       "PostgreSQL",
       "NextAuth",
-      "API Jikan",
+      "REST API",
     ],
-    dad: "2026",
+    dad: "1200",
     URL: "https://aniverse-gf7t.onrender.com/",
+  },
+];
+
+// List Sertifikat
+export const listSertifikat = [
+  {
+    id: 1,
+    nama: "Uji Kompetensi Teknik Sepeda Motor Honda",
+    penerbit: "PT Daya Adicipta Motora",
+    tahun: "2023",
+    filePdf: "/sertifikat/sertifikat 1.pdf",
+    kategori: "Keahlian & Otomotif",
+    dad: "100",
+  },
+  {
+    id: 2,
+    nama: "TOEIC Listening and Reading Score Report",
+    penerbit: "Educational Testing Service (ETS)",
+    tahun: "2021",
+    filePdf: "/sertifikat/sertifikat 4.pdf",
+    kategori: "Sertifikasi Bahasa",
+    dad: "200",
+  },
+  {
+    id: 3,
+    nama: "Pelatihan AutoCAD & SolidWorks 2D & 3D",
+    penerbit: "HUMAN UNISMA Bekasi",
+    tahun: "2022",
+    filePdf: "/sertifikat/sertifikat 6.pdf",
+    kategori: "Desain Teknik / CAD",
+    dad: "300",
+  },
+  {
+    id: 4,
+    nama: "Hour of Code at Microsoft Office Jakarta",
+    penerbit: "Microsoft Indonesia",
+    tahun: "2016",
+    filePdf: "/sertifikat/sertifikat 7.pdf",
+    kategori: "Programming",
+    dad: "400",
+  },
+  {
+    id: 5,
+    nama: "Praktek Kerja Industri (Body Repair)",
+    penerbit: "CV. Karya Indah Motor",
+    tahun: "2022",
+    filePdf: "/sertifikat/sertifikat 8.pdf",
+    kategori: "Pengalaman Kerja",
+    dad: "500",
+  },
+  {
+    id: 6,
+    nama: "Belajar Membuat Front-End Web untuk Pemula",
+    penerbit: "Dicoding Indonesia",
+    tahun: "2026",
+    filePdf: "/sertifikat/sertifikat 9.pdf",
+    kategori: "Front-End Web",
+    dad: "600",
+  },
+  {
+    id: 7,
+    nama: "Belajar Dasar Pemrograman JavaScript",
+    penerbit: "Dicoding Indonesia",
+    tahun: "2026",
+    filePdf: "/sertifikat/sertifikat 10.pdf",
+    kategori: "Web Development",
+    dad: "700",
+  },
+  {
+    id: 8,
+    nama: "Belajar Dasar Pemrograman Web",
+    penerbit: "Dicoding Indonesia",
+    tahun: "2026",
+    filePdf: "/sertifikat/sertifikat 11.pdf",
+    kategori: "Web Development",
+    dad: "800",
+  },
+  {
+    id: 9,
+    nama: "Introduction to Financial Literacy",
+    penerbit: "Dicoding Indonesia",
+    tahun: "2026",
+    filePdf: "/sertifikat/sertifikat 12.pdf",
+    kategori: "Soft Skills / Finance",
+    dad: "900",
   },
 ];

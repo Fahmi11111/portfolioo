@@ -1,29 +1,93 @@
-<!DOCTYPE html>
-<html lang="id" class="theme-light" id="html">
+<!doctype html>
+<html lang="id" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/assets/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!--Fonts-->
+    <!-- SEO & Metadata Portofolio -->
+    <title>Muhammad Fahmi — Web Developer & Portfolio</title>
+    <meta name="title" content="Muhammad Fahmi — Web Developer & Portfolio" />
+    <meta
+      name="description"
+      content="Portofolio interaktif Muhammad Fahmi, Mahasiswa Teknik Informatika UNINDRA & Front-End Web Developer."
+    />
+    <meta name="author" content="Muhammad Fahmi" />
+    <meta name="theme-color" content="#09090b" />
+
+    <!-- Open Graph / Link Preview (WhatsApp, LinkedIn, Twitter) -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Muhammad Fahmi — Web Developer & Portfolio"
+    />
+    <meta
+      property="og:description"
+      content="Portofolio interaktif Muhammad Fahmi, Mahasiswa Teknik Informatika UNINDRA & Front-End Web Developer."
+    />
+    <meta property="og:image" content="/assets/hero.jpg" />
+
+    <!-- Fonts & Icons Optimization -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
       rel="stylesheet"
     />
-
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
       rel="stylesheet"
     />
 
-    <title>Muhammad Fahmi | Portfolio</title>
+    <!-- Preloader Styling (Menangani Loading Awal) -->
+    <style>
+      .initial-loader {
+        position: fixed;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #09090b;
+        color: #ffffff;
+        font-family: "Poppins", sans-serif;
+        z-index: 9999;
+      }
+      .spinner {
+        width: 48px;
+        height: 48px;
+        border: 4px solid rgba(255, 255, 255, 0.1);
+        border-top-color: #3b82f6;
+        border-radius: 50%;
+        animation: spin 0.8s linear infinite;
+      }
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
   </head>
   <body
-    class="bg-white text-zinc-900 dark:bg-zinc-900 dark:text-white transition-colors duration-300"
+    class="bg-white text-zinc-900 dark:bg-zinc-950 dark:text-white transition-colors duration-300 antialiased selection:bg-blue-500 selection:text-white"
   >
-    <div id="root"></div>
+    <!-- Preloader ditempatkan di dalam #root agar otomatis hilang begitu React selesai render -->
+    <div id="root">
+      <div class="initial-loader">
+        <div class="spinner"></div>
+        <p
+          style="
+            margin-top: 1.25rem;
+            font-size: 0.875rem;
+            letter-spacing: 0.15em;
+            color: #a1a1aa;
+            font-weight: 500;
+          "
+        >
+          MEMUAT PORTOFOLIO...
+        </p>
+      </div>
+    </div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
