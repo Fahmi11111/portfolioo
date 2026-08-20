@@ -20,6 +20,7 @@ import Proyek3 from "/assets/proyek/Screenshot 33.png";
 import Proyek4 from "/assets/proyek/screenshot44.png";
 import Proyek5 from "/assets/proyek/Screenshot 188.png";
 import Proyek6 from "/assets/proyek/Screenshot-593.png";
+import Proyek7 from "/assets/proyek/Screenshot (1206).png";
 
 // 2. EXPORT DATA
 
@@ -78,15 +79,71 @@ export const listTools = [
     id: 8,
     gambar: Tools8,
     nama: "phpMyAdmin",
-    ket: "Database Management",
+    ket: "Database",
     dad: "1050",
   },
   {
     id: 9,
     gambar: Tools9,
     nama: "GitHub",
-    ket: "Version Control & Hosting",
+    ket: "Version Control",
     dad: "1200",
+  },
+  {
+    id: 10,
+    gambar:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+    nama: "HTML5",
+    ket: "Bahasa Markup Web",
+    dad: "1350",
+  },
+  {
+    id: 11,
+    gambar:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+    nama: "CSS",
+    ket: "Styling & Layout",
+    dad: "1500",
+  },
+  {
+    id: 12,
+    nama: "Next.js",
+    gambar:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+    ket: "React Framework",
+  },
+  {
+    id: 13,
+    nama: "Express.js",
+    gambar:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+    ket: "Backend Framework",
+  },
+  {
+    id: 14,
+    nama: "Prisma",
+    gambar:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/prisma/prisma-original.svg",
+    ket: "Next-gen ORM",
+  },
+  {
+    id: 15,
+    nama: "NextAuth.js",
+    gambar: "https://next-auth.js.org/img/logo/logo-sm.png",
+    ket: "Authentication",
+  },
+  {
+    id: 16,
+    nama: "Midtrans API",
+    gambar:
+      "https://images.seeklogo.com/logo-png/30/1/midtrans-logo-png_seeklogo-306623.png",
+    ket: "Payment Gateway",
+  },
+  {
+    id: 17,
+    nama: "REST API",
+    gambar: "https://img.icons8.com/color/512/api.png",
+    ket: "API Architecture",
   },
 ];
 
@@ -152,6 +209,21 @@ export const listProyek = [
     ],
     dad: "1200",
     URL: "https://aniverse-gf7t.onrender.com/",
+  },
+  {
+    id: 7,
+    gambar: Proyek7, // Sesuaikan variabel import gambarnya
+    nama: "Eventify – Modern Event & Ticketing Platform",
+    desk: "Platform manajemen dan pendaftaran event digital berbasis Full-Stack. Dilengkapi integrasi payment gateway otomatis (Midtrans API), sistem konfirmasi pesan dinamis, serta antarmuka responsif bertema gelap.",
+    tools: [
+      "React.js",
+      "Tailwind CSS",
+      "Node.js",
+      "Express.js",
+      "Midtrans API",
+    ],
+    dad: "1400",
+    URL: "https://event-id.netlify.app/",
   },
 ];
 
