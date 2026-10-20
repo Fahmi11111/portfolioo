@@ -192,7 +192,7 @@ export const listProyek = [
     desk: "Sistem buku tamu digital perpustakaan berbasis web untuk mencatat data kunjungan secara terstruktur, cepat, dan aman menggunakan pemrosesan server-side.",
     tools: ["HTML5", "CSS3", "JavaScript", "PHP", "MySQL"],
     dad: "1000",
-    URL: "https://visitorhub.kesug.com/",
+    URL: "https://visitorhub.lovestoblog.com/",
   },
   {
     id: 6,
