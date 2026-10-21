@@ -1,8 +1,8 @@
 <?php
-$server   = "sql303.infinityfree.com"; // contoh: sql303.byetcluster.com
-$user     = "if0_40337471";           // username MySQL kamu di hosting
-$password = "Visitorrrr"; // isi dengan password MySQL hosting
-$database = "if0_40337471_db_visitorhub"; // nama database di hosting
+$server   = "sql209.infinityfree.com"; // contoh: sql303.byetcluster.com
+$user     = "if0_43223009"; // username MySQL kamu di hosting
+$password = "Visitorhub123"; // isi dengan password MySQL hosting
+$database = "if0_43223009_bukupengunjung"; // nama database di hosting
 
 $koneksi = mysqli_connect($server, $user, $password, $database);
 

@@ -34,16 +34,11 @@ const Page = async (props) => {
   const recRes = await getAnimeResponse(`anime/${id}/recommendations`);
   const recList = recRes?.data?.slice(0, 4) ?? [];
 
-  const recommendations = await Promise.all(
-    recList.map(async (rec) => {
-      const detail = await getAnimeResponse(`anime/${rec.entry.mal_id}`);
-      return {
-        ...rec,
-        score: detail?.data?.score ?? null,
-        year: detail?.data?.year ?? null,
-      };
-    }),
-  );
+   const recommendations = recList.map((rec) => ({
+    ...rec,
+    score: rec.entry?.score ?? null,
+    year: rec.entry?.year ?? null,
+  }));
 
   return (
     <section className="relative min-h-screen bg-black text-white overflow-hidden">

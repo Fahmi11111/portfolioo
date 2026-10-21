@@ -7,7 +7,7 @@ const Page = async ({ params }) => {
   const { keyword } = await params; // Next.js 16 dynamic params harus di-await
   const decodeKeyword = decodeURI(keyword);
 
-  const searchAnime = await getAnimeResponse("anime", `q=${decodeKeyword}`);
+  const searchAnime = await getAnimeResponse("anime", `q=${encodeURIComponent(decodeKeyword)}`);
 
   return (
     <section className="space-y-3">

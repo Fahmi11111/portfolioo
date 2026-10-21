@@ -310,4 +310,13 @@ export const listSertifikat = [
     kategori: "Soft Skills / Finance",
     dad: "900",
   },
+  {
+    id: 10,
+    nama: "Panitia Registrasi - Indonesia Sports Summit 2026",
+    penerbit: "Kementerian Pemuda dan Olahraga Republik Indonesia (Kemenpora)",
+    tahun: "2026",
+    filePdf: "/sertifikat/sertifikat 13.pdf",
+    kategori: "Event Management / Volunteer",
+    dad: "1000",
+  },
 ];

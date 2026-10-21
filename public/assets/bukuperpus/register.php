@@ -4,10 +4,10 @@ ini_set('display_errors', 1);
 session_start();
 
 // ======== KONEKSI DATABASE ===========
-$server   = "sql303.infinityfree.com"; 
-$user     = "if0_40337471";           
-$password = "Visitorrrr"; 
-$database = "if0_40337471_db_visitorhub"; 
+$server   = "sql209.infinityfree.com"; // contoh: sql303.byetcluster.com
+$user     = "if0_43223009"; // username MySQL kamu di hosting
+$password = "Visitorhub123"; // isi dengan password MySQL hosting
+$database = "if0_43223009_bukupengunjung"; // nama database di hosting
 
 $koneksi = mysqli_connect($server, $user, $password, $database);
 if (!$koneksi) {

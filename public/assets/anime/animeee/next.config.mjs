@@ -14,6 +14,11 @@ const nextConfig = {
         protocol: "https",
         hostname: "avatars.githubusercontent.com",
       },
+      // Gambar cover dari AniList (mis. s4.anilist.co)
+      {
+        protocol: "https",
+        hostname: "**.anilist.co",
+      },
     ],
   },
 };
